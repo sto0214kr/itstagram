@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="comment">
+	<select id="getList" resultType="comment">
+		SELECT * FROM comment_b
+	</select>
+	
+	<select id="getList-ref_board" resultType="comment" parameterType="int">
+		SELECT * FROM comment_b
+		WHERE ref_board = #{ref_board} AND ref_comment = #{ref_comment}
+	</select>
+	
+	<select id="get" resultType="comment" parameterType="int">
+		SELECT * FROM comment_b
+		WHERE num = #{num}
+	</select>
+	
+	<select id="getNum-a" resultType="int" parameterType="int">
+		SELECT COUNT(*) FROM comment_b
+		WHERE ref_board = #{ref_board}
+	</select>
+	
+	<select id="getNum-b" resultType="int">
+		SELECT COUNT(*) FROM comment_b
+		WHERE ref_board = #{ref_board} AND ref_comment = #{ref_comment}
+	</select>
+	
+	<select id="getNew" resultType="comment">
+		SELECT * FROM comment_b
+		WHERE regdate = (SELECT MAX(regdate) FROM comment_b)
+	</select>
+	
+	<insert id="add" parameterType="comment">
+		INSERT INTO comment_b VALUES(
+			seq_comment.NEXTVAL,
+			#{member_num},
+			#{ref_board}, #{ref_comment},
+			#{content}, CURRENT_TIMESTAMP,
+			0
+		)
+	</insert>
+	
+	<delete id="remove" parameterType="int">
+		DELETE FROM comment_b WHERE num = #{num}
+	</delete>
+</mapper>

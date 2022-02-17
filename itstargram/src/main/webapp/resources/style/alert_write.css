@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+.container-follow-info .wrapper .body_a {
+	display: flex;
+}
+
+.container-follow-info .wrapper .header_a #close_a {
+	position: fixed;
+	float: left;
+	left: 95%;
+
+	margin: 15px 10px;
+	
+	font-size: 40px;
+	line-height: 30%;
+}
+
+#write-alert .header_a {
+	position: relative;
+}
+
+#write-alert #send_a {
+	position: absolute;
+	float: left;
+	left: 90%;
+	top: 50%;
+	transform: translate(0, -50%);
+	font-size: 13px;
+	margin: auto 0;
+}
+
+#write-alert .body_a .left {
+	text-align: center;
+	height: 500px;
+	float: left;
+	
+	position: relative;
+	width: 400px;
+}
+
+#write-alert .body_a .right {
+	float: left;
+}
+
+#write-alert #upload {
+	display: none;
+}
+
+#write-alert .body_a .left span {
+	display: inline-block;
+	margin: 10px 0;
+}
+
+#write-alert .body_a label {
+	display: inline-block;
+	padding: 5px 10px;
+	
+	border-radius: 5px;
+	
+	font-size: 14px;
+	background: #0095f6;
+	color: #fff;
+}
+
+#write-alert .body_a .left .imgs {
+	position: absolute;
+	white-space: nowrap;
+	width: 100%;
+	height: 500px;
+	overflow-x: auto;
+	overflow-y: hidden;
+	font-size: 0;
+}
+
+#write-alert .body_a .left .imgs .img {
+	display: inline-block;
+	position: relative;
+	width: 100%; height: 500px;
+	text-align: center;
+}
+
+#write-alert .body_a .left .imgs .img img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translate(50, 50);
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	margin: auto;
+}
+
+#write-alert .body_a .left .imgs .before_btn {
+	color: blue;
+}
+
+/* ================================================== */
+
+#write-alert .body_a .right .profile {
+	display: flex;
+	align-items: center;
+	margin: 10px 0;
+}
+
+#write-alert .body_a .right .img {
+	height: 25px;
+}
+
+#write-alert .body_a .right .img img {
+	width: 25px;
+	border-radius: 100%;
+}
+
+#write-alert .body_a .right .profile span {
+	display: block;
+	margin: 0 15px;
+	font-weight: bold;
+}
+
+/* ================================================== */
+#write-alert .right {
+	margin-left: 15px;
+}
+
+#write-alert .container-follow-info .right textarea {
+	display: block;
+	width: 300px;
+	height: 400px;
+	resize: none;
+	
+	border: none;
+}
+
+#write-alert .container-follow-info .right textarea:focus {
+	outline: none;
+}
+
+.before_btn, .after_btn {
+	position: absolute;
+	width: 20px; height: 20px;
+	background: gray;
+	
+}

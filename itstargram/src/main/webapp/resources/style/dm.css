@@ -1,0 +1,205 @@
+* {
+	margin: 0; padding: 0;
+	list-style: none;
+}
+
+.body {
+	display: flex;
+	overflow: hideen;
+	
+	max-width: 975px;
+	margin: 0 auto;
+}
+
+.top {
+	position: relative;
+	overflow: hidden;
+	
+	height: 60px;
+	
+	border: 1px solid #ccc;
+}
+
+.top>div {
+	float: left;
+}
+
+/* ================================================== */
+
+.body>.left {
+	width: 40%;
+}
+
+.left .top {
+	border-top-left-radius: 10px;
+}
+
+.left .top .wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	width: 100%;
+	height: 100%;
+	
+	margin: auto 0;
+
+	text-align: center;
+}
+
+#id, #name {
+	margin-right: 20px;
+	
+	font-size: 20px;
+}
+
+.left .top .wrapper #menu {
+	margin: auto 0;
+}
+
+.left .top #write {
+	position: absolute;
+	left: 95%;
+	top: 50%;
+	transform: translate(-95%, -50%);
+}
+
+/* ================================================== */
+
+.left #list {
+	display: block;
+	overflow: auto;
+	
+	height: 700px;
+	margin-top: -1px;
+	
+	border: 1px solid #ccc;
+	border-bottom-left-radius: 10px;
+}
+
+.left #list li {
+	display: flex;
+	padding: 15px 20px;
+}
+
+.left #list #profile img {
+	width: 100%; max-width: 50px;
+	
+    border-radius: 100%;
+    box-sizing: border-box;
+}
+
+.left #list #info {
+	padding-left: 15px;
+	font-size: 15px;
+}
+
+.left #list #info .wrapper {
+	color: #aaa;
+}
+
+/* ================================================== */
+
+.body>.right {
+	width: 60%;
+	margin-left: -1px;
+}
+
+.right .top {
+	position: relative;
+	overflow: hidden;
+	
+	border: 1px solid #ccc;
+	border-top-right-radius: 10px;
+}
+
+
+.right .top .wrapper {
+	display: flex;
+	align-items: center;
+	
+	height: 100%;
+	margin-left: 30px;
+}
+
+.right .top .wrapper #profile {
+	max-height: 25px;
+	margin-right: 10px;
+}
+
+.right .top .wrapper #profile img {
+	width: 100%; max-width: 25px;
+
+    border-radius: 100%;
+    box-sizing: border-box;
+}
+
+.right .top #info {
+	position: absolute;
+	left: 95%;
+	top: 50%;
+	transform: translate(-95%, -50%);
+}
+
+/* ================================================== */
+
+.right #list {
+	overflow: auto;
+	
+	height: 700px;
+	padding: 0 25px;
+	margin-top: -1px;
+	
+	border: 1px solid #ccc;
+	border-bottom-right-radius: 10px;
+}
+
+.right #list li {
+	display: flex;
+	align-items: flex-end;
+}
+
+.right #list li span {
+	display: inline-block;
+}
+
+.right #list .date {
+	justify-content: center;
+	
+	padding: 10px 0;
+	
+	font-size: 12px;
+	text-align: center;
+}
+
+.right #list li:not(.date) span {
+	padding: 12px 15px;
+	border-radius: 30px;
+	
+	font-size: 15px;
+}
+
+.right #list .right {
+	justify-content: flex-end;
+}
+
+.right #list .right span {
+	margin: 5px 25px;
+	background: #ddd;
+}
+
+.right #list .left span {
+	margin: 5px 50px;
+	border: 1px solid #ddd;
+}
+
+.right #list .left.end span {
+	margin: 5px 20px;
+}
+
+.right #list .left.end img {
+	width: 100%; max-width: 30px;
+
+    border-radius: 100%;
+    box-sizing: border-box;
+}

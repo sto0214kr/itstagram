@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+* { 
+	padding: 0; margin: 0;
+	list-style: none;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+#close-btn {
+	position: absolute;
+	font-size: 50px;
+	color: #fff;
+	float: left;
+	left: 95%;
+	z-index: 10;
+}
+
+.container-follow-info {
+	z-index: 15;
+
+	display: inline-block;
+	position: fixed;
+	top: 0; left: 0;
+	
+	width: 100%; height: 100%;
+}
+
+.container-follow-info .background {
+	width: 100%;
+	height: 100%;
+	
+	position: absolute;
+	
+	opacity: 70%;
+	background: #000;
+}
+
+
+.container-follow-info .wrapper {
+	position: absolute;
+	top: 50%; left: 50%;
+	transform: translate(-50%, -50%);
+	
+	margin: 0 auto;
+	
+	background: #fff;
+	
+	border-radius: 10px;
+}
+
+#follow-alert .wrapper {
+		width: 25%;
+}
+
+.container-follow-info .wrapper .header_a {
+	overflow: hidden;
+	border-bottom: 1px solid #ccc;
+}
+
+.container-follow-info .wrapper .header_a #title_a {
+	float: left;
+	width: 100%;
+	margin: 15px 0;
+	text-align: center;
+}
+
+.container-follow-info .wrapper .header_a #close_a {
+	position: absolute;
+	float: left;
+	left: 85%;
+
+	margin: 15px 10px;
+	
+	font-size: 40px;
+	line-height: 30%;
+}
+
+/* ================================================== */
+
+.container-follow-info .wrapper .body_a {
+	height: 500px;
+}
+
+.container-follow-info .wrapper .body_a ul.menu {
+	display: flex;
+}
+
+.container-follow-info .wrapper .body_a ul.menu li {
+	width: 50%;
+	padding: 15px 0;
+	
+	border-bottom: 1px solid #bbb;
+	
+	text-align: center;
+}
+
+.container-follow-info .wrapper .body_a ul.menu li.selected {
+	border-bottom-color: #000;
+}
+
+/* ================================================== */
+
+.body_a ul.list li {
+	overflow: hidden;
+	position: relative;
+}
+
+.body_a ul.list li>div {
+	float: left;
+	display: flex;
+	padding: 7.5px 25px;
+	
+	font-size: 13px;
+}
+
+.body_a ul.list #profile_a img {
+	width: 30px;
+	max-height: 30px;
+	margin-right: 10px;
+    
+    display: block;
+	object-fit: cover;
+	margin-right: 15px;
+	
+	border-radius: 100%;
+}
+
+.body_a ul.list #id_a {
+	font-weight: bold;
+}
+
+.body_a ul.list #name_a {
+	color: #999;
+}
+
+.body_a ul.list #follow_a {
+	float: right;
+	position: absolute;
+	
+	top: 50%;
+	left: 75%;
+	transform: translate(0%, -50%);
+	
+	padding: 4px 12px;
+	margin-right: 20px;
+	
+	border-radius: 5px;
+}
+
+#follow_a.no {
+	background: #0095f6;
+	color: #fff;
+}
+
+#follow_a.yes {
+	background: #fff;
+	color: #000;
+	border: 1px solid #ddd;
+}
+
+/* ================================================== */
